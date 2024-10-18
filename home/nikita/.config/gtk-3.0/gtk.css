@@ -1,0 +1,17 @@
+.primary-toolbar .slider-button:first-child {
+  padding: 0 0.5em 0 0.4375em;
+}
+
+.primary-toolbar .slider-button:last-child {
+  padding: 0 0.3125em 0 0.5em;
+}
+
+.primary-toolbar .path-bar .toggle {
+  padding: 0 0.75em 0 1.25em;
+}
+
+.primary-toolbar .path-bar .toggle image {
+   padding: 0;
+  -gtk-icon-transform: scale(0.8);
+}
+

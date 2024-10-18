@@ -1,0 +1,96 @@
+window {
+  background-image: url("/usr/share/nwg-hello/firetower-blur.png"); 
+  background-size: 100% 100%;
+}
+
+#form-wrapper {
+  margin: 0 69.1825em;
+}
+
+entry {
+  color: rgba(242, 243, 244, 0.75);
+  border: 1px solid rgba(242, 243, 244, 0.75);
+  border-radius: 18px;
+  background-color: rgba(242, 243, 244, 0.25);
+  padding: 8px 14px;
+  margin: 0 0 4px;
+}
+
+button {
+  background: none;
+  color: rgba(242, 243, 244, 1);
+  border: 1px solid rgba(242, 243, 244, 0.75);
+  border-radius: 18px;
+  background-color: rgba(242, 243, 244, 0.25);
+  font-size: 18px;
+  font-weight: 700;
+  font-family: Inconsolata;
+  box-shadow: none;
+  text-shadow: none;
+  padding: 12px
+}
+
+button:hover {
+  background-color: rgba(255, 255, 255, 0.2)
+}
+
+checkbutton {
+  margin: 4px 0 0;
+  outline: none;
+}
+
+checkbutton check {
+  transition: none;
+  margin: 0 10px 0 2px;
+  background: rgba(242, 243, 244, 0.25);
+  border: 1px solid rgba(242, 243, 244, 0.75);
+}
+
+#power-button {
+  font-size: 16px;
+  font-family: Sans;
+  font-weight: 400;
+  background: none;
+  border: none;
+  margin: 2em 0 0;
+}
+
+#power-button image {
+  margin: 0 0 6px;
+}
+
+#power-button:hover {
+  background-color: rgba(255, 255, 255, 0.1)
+}
+
+#power-button:active {
+  background-color: rgba(255, 255, 0, 0.2)
+}
+
+#welcome-label {
+  opacity: 0;
+}
+
+#clock-label {
+  font-size: 6em;
+  font-family: JetBrains Mono Extrabold;
+  color: rgba(242, 243, 244, 0.75);
+}
+
+#date-label {
+  font-size: 1.375em;
+  font-family: Inconsolata;
+}
+
+#form-label {
+  margin: 2px 0 2px;
+}
+
+#form-combo {
+}
+
+#password-entry {
+}
+
+#login-button {
+}

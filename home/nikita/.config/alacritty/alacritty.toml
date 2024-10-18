@@ -1,0 +1,16 @@
+[shell]
+program = '/bin/zsh'
+
+[window]
+opacity = 0.8
+
+[window.padding]
+x = 10
+y = 10
+
+[font]
+size = 15
+
+[font.normal]
+family = 'Monospace'
+
