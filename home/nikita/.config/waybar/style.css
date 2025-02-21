@@ -5,17 +5,23 @@
   transition-duration: .5s;
 }
 
+.modules-center {
+  background-color: transparent;	
+}	
+
 .modules-right,
-.modules-center,
 .modules-left {
-  margin: 0.8em 0 0 0;
-  border-radius: 2em;
+  border-radius: 0.8em;
   background-color: rgba(0, 43, 51, 0.85);
 }
 
 .modules-right {
   margin: 0.8em 0.8em 0 0;
   padding: 0 0.8em 0 0;
+}
+
+.modules-left {
+  margin: 0.8em 0 0 0.8em;
 }
 
 button {
@@ -27,11 +33,11 @@ button {
 }
 
 #workspaces {
-  border-radius: 5em;
+  border-radius: 0.8em;
 }
 
 #workspaces button {
-  border-radius: 5em;
+  border-radius: 0.8em;
   background-color: transparent;
 }
 
@@ -48,7 +54,7 @@ button {
 }
 
 #battery {
-  padding: 0 1em;
+  padding: 0 0 0 1em;
 }
 
 #network {
@@ -60,7 +66,7 @@ button {
 }
 
 #pulseaudio {
-  padding: 0 0.3em 0 0.8em;
+  padding: 0 0.3em 0 0.9em;
 }
 
 #memory {
