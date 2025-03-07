@@ -1,62 +1,94 @@
 window {
-  background-image: url("/usr/share/nwg-hello/firetower-blur.png"); 
+  background-image: url("/usr/share/nwg-hello/nothing-blur.png"); 
   background-size: 100% 100%;
 }
 
 #form-wrapper {
-  margin: 0 69.1825em;
+  margin: 0 48.1em;
 }
 
 entry {
-  color: rgba(242, 243, 244, 0.75);
-  border: 1px solid rgba(242, 243, 244, 0.75);
-  border-radius: 18px;
-  background-color: rgba(242, 243, 244, 0.25);
-  padding: 8px 14px;
-  margin: 0 0 4px;
+  color: rgba(242, 243, 244, 1);
+  border: none;
+  outline: none;
+  box-shadow: none;
+  border-radius: 32px;
+  background-color: #2F3035;
+  padding: 11px 24px;
+  margin: 0 0 8px;
+  font-size: 20px;
+  font-family: Inter;
+  font-weight: 300;
 }
 
 button {
   background: none;
   color: rgba(242, 243, 244, 1);
-  border: 1px solid rgba(242, 243, 244, 0.75);
-  border-radius: 18px;
-  background-color: rgba(242, 243, 244, 0.25);
-  font-size: 18px;
-  font-weight: 700;
-  font-family: Inconsolata;
+  border: none;
+  border-radius: 32px;
+  background-color: #2F3035;
+  font-size: 20px;
+  font-weight: 300;
+  font-family: Inter;
   box-shadow: none;
   text-shadow: none;
-  padding: 12px
+  padding: 14px 22px 14px 22px;
+  margin: 0 0 -30px 0;
 }
 
 button:hover {
-  background-color: rgba(255, 255, 255, 0.2)
+  background-color: #2A2B2F;
+}
+
+button:active {
+  background-color: rgba(255, 255, 255, 0.33);
 }
 
 checkbutton {
   margin: 4px 0 0;
   outline: none;
+  font-size: 18px;
+  font-family: Inter;
+  font-weight: 300;
+}
+
+checkbutton label {
+  padding: 1px 0 0 2px;
 }
 
 checkbutton check {
   transition: none;
+  padding: 0;
   margin: 0 10px 0 2px;
-  background: rgba(242, 243, 244, 0.25);
-  border: 1px solid rgba(242, 243, 244, 0.75);
+  background: #333439;
+  color: #D71A21;
+  border-top: 8px solid #333439;
+  border-left: 8px solid #333439;
+  border-right: 7.5px solid #333439;
+  border-bottom: 7.5px solid #333439;
+  font-size: 20px;
+  border-radius: 32px;
+}
+
+checkbutton check:active {
+  box-shadow: none;
+}
+
+checkbutton check:checked {
+  background: #D71A21;
 }
 
 #power-button {
   font-size: 16px;
-  font-family: Sans;
+  font-family: Inter;
   font-weight: 400;
   background: none;
   border: none;
-  margin: 2em 0 0;
+  margin: 8.5em 0 0;
 }
 
 #power-button image {
-  margin: 0 0 6px;
+  margin: 0 0 10px;
 }
 
 #power-button:hover {
@@ -64,7 +96,7 @@ checkbutton check {
 }
 
 #power-button:active {
-  background-color: rgba(255, 255, 0, 0.2)
+  background-color: rgba(255, 255, 255, 0.2)
 }
 
 #welcome-label {
@@ -72,18 +104,20 @@ checkbutton check {
 }
 
 #clock-label {
+  margin: 1em 0 0.1em;
   font-size: 6em;
-  font-family: JetBrains Mono Extrabold;
+  font-family: 'NType 82';
   color: rgba(242, 243, 244, 0.75);
 }
 
 #date-label {
-  font-size: 1.375em;
-  font-family: Inconsolata;
+  font-size: 1.5em;
+  font-family: 'NType 82';
 }
 
 #form-label {
   margin: 2px 0 2px;
+  opacity: 0;
 }
 
 #form-combo {
@@ -93,4 +127,6 @@ checkbutton check {
 }
 
 #login-button {
+ padding: 18px 0;
+ background-color: #D71A21;
 }

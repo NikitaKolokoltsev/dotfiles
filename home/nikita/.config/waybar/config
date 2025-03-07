@@ -1,8 +1,7 @@
 {
     "layer": "top", // Waybar at top layer
     "position": "top", // Waybar position (top|bottom|left|right)
-    "height": 30, // Waybar height (to be removed for auto height)
-    "spacing": 4, // Gaps between modules (4px)
+    "spacing": 0, // Gaps between modules (4px)
     "modules-left": ["hyprland/workspaces", "sway/mode", "sway/scratchpad", "custom/media"],
     "modules-center": [],
     "modules-right": ["custom/notifications", "pulseaudio", "network", "tray#nm", "cpu", "memory", "temperature", "keyboard-state", "sway/language", "battery", "battery#bat2", "hyprland/language", "clock", "tray"],
@@ -18,7 +17,7 @@
     "hyprland/language": {
         "format": {},
         "format-en": "US",
-        "format-ru": "RU"  
+        "format-ru": "RU"
     },
     "sway/mode": {
         "format": "<span style=\"italic\">{}</span>"
@@ -92,10 +91,10 @@
             "warning": 30,
             "critical": 15
         },
-        "format": "{capacity}% {icon}",
-        "format-charging": "{capacity}% ",
-        "format-plugged": "{capacity}% ",
-        "format-alt": "{time} {icon}",
+        "format": "{capacity}%  {icon}",
+        "format-charging": "{capacity}%  ",
+        "format-plugged": "{capacity}%  ",
+        "format-alt": "{time}  {icon}",
         "format-icons": ["", "", "", "", ""]
     },
     "battery#bat2": {
@@ -114,8 +113,8 @@
         "format-bluetooth": "{volume}%  {icon} {format_source}",
         "format-bluetooth-muted": " {icon} {format_source}",
         "format-muted": "     {format_source}",
-        "format-source": "{volume}%    ",
-        "format-source-muted": " ",
+        "format-source": "{volume}%     ",
+        "format-source-muted": "  ",
         "format-icons": {
             "headphone": "",
             "hands-free": "",
@@ -123,16 +122,16 @@
             "phone": "",
             "portable": "",
             "car": "",
-            "default": ["  ", "  ", "   "]
+            "default": ["    ", "   ", "  "]
         },
         "on-click": "pavucontrol"
     },
     "custom/notifications": {
-      "format": "    {icon}",
+      "format": "{icon}",
       "format-icons": {
-        "notification": "<span foreground='#00FFFF'><small><sup>🔵</sup></small></span>",
-        "none": " ",
-        "dnd-notification": "<span foreground='#00FFFF'><small><sup>🔵</sup></small></span>",
+        "notification": "",
+        "none": "",
+        "dnd-notification": "",
         "dnd-none": ""
       },
       "return-type": "json",
@@ -143,4 +142,3 @@
       "escape": true
     }
 }
-
