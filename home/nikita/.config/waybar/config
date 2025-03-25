@@ -17,7 +17,8 @@
     "hyprland/language": {
         "format": {},
         "format-en": "US",
-        "format-ru": "RU"
+        "format-ru": "RU",
+        "format-pl": "PL"
     },
     "sway/mode": {
         "format": "<span style=\"italic\">{}</span>"
@@ -68,8 +69,8 @@
         ]
     },
     "clock": {
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%Y-%m-%d}"
+        "tooltip": false,
+        "on-click": "~/.config/eww/scripts/calendar/init.sh"
     },
     "cpu": {
         "format": "{usage}%  ",

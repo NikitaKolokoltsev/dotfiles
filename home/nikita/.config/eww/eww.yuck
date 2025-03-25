@@ -1,0 +1,109 @@
+(defwidget closer [window]
+  (eventbox :class "closer"
+            :onclick "./scripts/calendar/init.sh"))
+
+(defwidget spacer []
+  (label :text ""))
+
+(defvar calendar_data "{}")
+
+(defwindow calendar
+  :monitor 1
+  :geometry (geometry :x "14"
+                      :y "0"
+                      :anchor "top right")
+  :stacking "fg"
+  :windowtype "normal"
+  :focusable false
+  :wm-ignore true
+(calendar_widget))
+
+(defwindow calendar-closer
+  :monitor 1
+  :geometry (geometry :width "100%"
+                      :height "100%")
+  :stacking "fg"
+  :focusable false
+  (closer :window "calendar"))
+
+
+(defwidget calendar_widget []
+  (box :class "calendar-widget"
+    (calendar_layout)))
+
+(defwidget calendar_layout []
+  (box :class "calendar-layout"
+       :valign "start"
+       :halign "center"
+       :space-evenly false
+       :orientation "vertical"
+    (calendar_header)
+    (calendar_week_days)
+    (calendar_grid)))
+
+; HEADER
+
+(defwidget calendar_header []
+  (centerbox :class "calendar-header"
+             :valign "center"
+             :orientation "horizontal"
+    (calendar_current)
+    (spacer)
+    (calendar_controls)))
+
+(defwidget calendar_current []
+  (label :class "current"
+         :xalign "0"
+         :text "${calendar_data.month.name} ${calendar_data.year}"))
+
+(defwidget calendar_controls []
+  (box :class "controls"
+       :halign "end"
+       :valign "center"
+       :space-evenly false
+       :orientation "vertical"
+    (button :class "prev-month"
+            :timeout "5s"
+            :onclick "./scripts/calendar/prev.sh ${calendar_data.year} ${calendar_data.month.number}"
+      {""})
+    (button :class "next-month"
+            :timeout "5s"
+            :onclick "./scripts/calendar/next.sh ${calendar_data.year} ${calendar_data.month.number}"
+      {""})))
+
+; WEEK DAYS
+
+(defwidget calendar_week_days []
+  (box :class "calendar-week-days"
+       :space-evenly true
+       :orientation "horizontal"
+    (for day in {calendar_data.days}
+      (calendar_week_day :day day))))
+
+(defwidget calendar_week_day [day]
+  (box :class "week-day"
+       :orientation "horizontal"
+    (label :text day
+           :xalign "1")))
+
+; GRID
+
+(defwidget calendar_grid []
+  (box :class "calendar-grid"
+       :orientation "vertical"
+    (for week in {calendar_data.weeks}
+      (calendar_week :week week))))
+
+(defwidget calendar_week [week]
+  (box :class "week"
+       :space-evenly true
+       :orientation "horizontal"
+    (for day in week
+      (calendar_day :day day))))
+
+(defwidget calendar_day [day]
+  (box :class "day ${day.outer ? "outer " : ""}
+                   ${day.current ? "current " : ""}"
+       :orientation "horizontal"
+    (label :text {day.day}
+           :xalign {day.current ? "0.5" : "1"})))

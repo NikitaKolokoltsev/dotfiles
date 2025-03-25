@@ -1,0 +1,90 @@
+window {
+  background: transparent;
+}
+
+.closer {
+  opacity: 0;
+}
+
+.calendar-widget {
+  border-radius: 18px;
+  background: transparent;
+  padding: 0 0 20px 20px;
+
+  .calendar-layout {
+    padding: 20px 22px 22px;
+    border: 1px solid rgba(47, 48, 53, 1);
+    border-radius: 18px;
+    background: rgba(20, 20, 22, 0.8);
+    box-shadow: 0 6px 12px 0px rgba(0, 0, 0, 0.75);
+
+    .calendar-header {
+      margin: 2px 0 12px 6px;
+
+      .current {
+        font-size: 26px;
+        font-family: 'NType 82';
+      }
+
+      .controls {
+        margin: -4px 0 0;
+
+        .prev-month,
+        .next-month {
+          min-width: 0;
+          padding: 6px 0;
+          border: none;
+          border-radius: 20px;
+          font-size: 12px;
+          background: transparent;
+          box-shadow: none;
+        }
+
+        .prev-month {
+          margin: 0 0 -12px;
+        }
+      }
+    }
+
+    .calendar-week-days {
+      margin: 0 0 0 -4px;
+      padding: 1px;
+
+      .week-day {
+        margin: 3px;
+        padding: 3px;
+        font-weight: 600;
+        font-size: 18px;
+        font-family: 'Inter';
+      }
+    }
+
+    .calendar-grid {
+      margin: 0 0 0 -4px;
+      padding: 1px;
+
+      .week {
+        margin: -2px 0;
+
+        .day {
+          margin: 3px;
+          padding: 3px;
+          font-size: 18px;
+          font-family: 'Inter';
+
+          &.outer {
+            opacity: 0.5;
+            background: transparent;
+          }
+
+          &.current {
+            margin: 3px 1px 3px 5px;
+            border-radius: 20px;
+            color: #1C1E1D;
+            background: #FFFFFF;
+          }
+        }
+      }
+    }
+  }
+}
