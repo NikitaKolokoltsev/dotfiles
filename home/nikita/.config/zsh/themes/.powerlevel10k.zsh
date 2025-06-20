@@ -112,6 +112,8 @@
     # example               # example user-defined segment (see prompt_example function below)
   )
 
+  typeset -g ZLE_RPROMPT_INDENT=0
+
   # Defines character set used by powerlevel10k. It's best to let `p10k configure` set it for you.
   typeset -g POWERLEVEL9K_MODE=awesome-fontconfig
   # When set to `moderate`, some icons will have an extra space after them. This is meant to avoid
@@ -215,7 +217,7 @@
 
   ##################################[ dir: current directory ]##################################
   # Current directory background color.
-  typeset -g POWERLEVEL9K_DIR_BACKGROUND=4
+  typeset -g POWERLEVEL9K_DIR_BACKGROUND=252
   # Default current directory foreground color.
   typeset -g POWERLEVEL9K_DIR_FOREGROUND=000
   # If directory is too long, shorten some of its segments to the shortest possible unique
@@ -1742,7 +1744,7 @@
   ####################################[ time: current time ]####################################
   # Current time color.
   typeset -g POWERLEVEL9K_TIME_FOREGROUND=0
-  typeset -g POWERLEVEL9K_TIME_BACKGROUND=7
+  typeset -g POWERLEVEL9K_TIME_BACKGROUND=252
   # Format for the current time: 09:51:02. See `man 3 strftime`.
   typeset -g POWERLEVEL9K_TIME_FORMAT='%D{%H:%M:%S}'
   # If set to true, time will update when you hit enter. This way prompts for the past
