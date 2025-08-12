@@ -1,6 +1,6 @@
 #waybar {
-  background-color: transparent;
   color: #FFFFFF;
+  background-color: transparent;
   transition-property: background-color;
   transition-duration: .5s;
 }
@@ -26,10 +26,10 @@ button {}
 #workspaces button {
   min-width: 2.4em;
   min-height: 2.4em;
+  margin: 0 0.6em 0 0;
+  padding: 0;
   border-radius: 2em;
   font-size: 0.9em;
-  padding: 0;
-  margin: 0 0.6em 0 0;
   background-color: #2F3035;
 }
 
@@ -52,9 +52,9 @@ button {}
 #tray,
 #language,
 #custom-notifications {
-  background-color: #2F3035;
   border-radius: 2em;
-  font-family: 'Inter';
+  font-family: 'Inter', 'Font Awesome 7 Free';
+  background-color: #2F3035;
 }
 
 #clock {
@@ -63,8 +63,8 @@ button {}
 }
 
 #battery {
-  padding: 0.025em 1em 0;
   margin: 0 0.3em;
+  padding: 0.025em 1.1em 0 1em;
 }
 
 #network {
@@ -75,17 +75,21 @@ button {}
 }
 
 #pulseaudio {
-  padding: 0.025em 0.4em 0 1.1em;
   margin: 0 0.3em;
+  padding: 0.025em 1.15em 0 1.1em;
 }
 
-#pulseaudio label {
-  margin-right: -2em;
+#pulseaudio.source-muted {
+  padding: 0.025em 0.95em 0 1.1em;
+}
+
+#pulseaudio.muted {
+  padding: 0.025em 1.15em 0 0.8em;
 }
 
 #tray {
-  padding: 0.025em 1em 0;
   margin: 0 0 0 0.3em;
+  padding: 0.025em 1em 0;
 }
 
 #tray.nm {
@@ -93,14 +97,14 @@ button {}
   padding: 0.025em 0.9em 0 0;
   border-top-left-radius: 0;
   border-top-right-radius: 2em;
-  border-bottom-left-radius: 0;
   border-bottom-right-radius: 2em;
+  border-bottom-left-radius: 0;
 }
 
 #language {
-  padding: 0.025em 1em 0;
-  margin: 0 0.3em;
   min-width: 1.5em;
+  margin: 0 0.3em;
+  padding: 0.025em 1em 0;
 }
 
 #custom-notifications {
@@ -118,8 +122,8 @@ button {}
 }
 
 #cpu {
-  padding: 0 0.7em 0 1em;
   margin: 0 0 0 0.3em;
+  padding: 0 0.7em 0 1em;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
@@ -130,8 +134,8 @@ button {}
 }
 
 #temperature {
-  padding: 0.025em 1em 0 0.7em;
   margin: 0 0.3em 0 0;
+  padding: 0.025em 1em 0 0.7em;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
